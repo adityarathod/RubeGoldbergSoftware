@@ -1,0 +1,3 @@
+# RubeGoldbergSoftware
+Triggers for Rube Goldberg machines. Don't ask....
+please don't
