@@ -9,5 +9,5 @@ s.listen(5)                 # Now wait for client connection.
 while True:
    c, addr = s.accept()     # Establish connection with client.
    print ('Got connection from', addr)
-   c.send('Berbawy's Makers is epic.'.encode())
+   c.send('It works...'.encode())
    c.close()                # Close the connection
