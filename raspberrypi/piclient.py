@@ -1,5 +1,8 @@
 import socket
+import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(7, GPIO.OUT)
 s = socket.socket()
 # Localhost for testing purposes
 host = "127.0.0.1"
@@ -7,5 +10,6 @@ host = "127.0.0.1"
 port = 12345
 
 s.connect((host, port))
-print (s.recv(1024).decode())
+if (s.recv(1024).decode()) == "GO":
+  servo()
 s.close
