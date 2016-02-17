@@ -1,4 +1,5 @@
 import os
+import socket
 s = socket.socket()
 # Localhost for testing purposes
 host = "127.0.0.1"
