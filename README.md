@@ -4,7 +4,7 @@ Triggers for Rube Goldberg machines.
 
 Visit us on [berbawy.com](http://berbawy.com/makers)
 
-## Preconfigured Pi Use Instructions
+## How to Use the Preconfigured Pis
 If you have a Raspberry Pi with the preconfigured image, you have all the necessary software and modifications to keep your Pi up to date with the latest software.
 ### Commands You Can Use
 | Command |            Function           |
