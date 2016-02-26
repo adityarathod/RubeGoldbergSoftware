@@ -1,8 +1,18 @@
 # Rube Goldberg Software
+##### Raspberry Pi 
+
+![current version](https://img.shields.io/badge/current%20version-0.2.0__37-brightgreen.svg)
+
+##### Windows 
+
+![retired](https://img.shields.io/badge/current%20version-retired-red.svg)
+
+** PLEASE KEEP YOUR SOFTWARE UP TO DATE. **
+
 Triggers for Rube Goldberg machines.
 
+Visit us on [berbawy.com](http://berbawy.com/makers).
 
-Visit us on [berbawy.com](http://berbawy.com/makers)
 
 ## How to Use the Preconfigured Pis
 If you have a Raspberry Pi with the preconfigured image, you have all the necessary software and modifications to keep your Pi up to date and ready to use.
