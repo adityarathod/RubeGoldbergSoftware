@@ -7,7 +7,7 @@
 
 ![retired](https://img.shields.io/badge/current%20version-retired-red.svg)
 
-** PLEASE KEEP YOUR SOFTWARE UP TO DATE. **
+**PLEASE KEEP YOUR SOFTWARE UP TO DATE.**
 
 Triggers for Rube Goldberg machines.
 
