@@ -2,7 +2,7 @@ import socket               # Import socket module
 import time # Import the time module
 import RPi.GPIO as GPIO
 
-serDelay = 0.0015 # The delay between the high and low pulses
+serDelay = 0.002 # The delay between the high and low pulses
 
 # Set up GPIO
 GPIO.setmode(GPIO.BOARD)
