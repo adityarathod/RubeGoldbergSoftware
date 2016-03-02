@@ -23,6 +23,13 @@ If you have a Raspberry Pi with the preconfigured image, you have all the necess
 | `rgversion` | Display the version of the software. This will come in handy when dealing with software issues (if any).|
 | `pisender` | Run the pisender Python script located at `/home/pi/rubegoldberg/raspberrypi/pisender.py`. **ALWAYS** run the sender from here. |
 | `pilistener` | Run the pisender Python script located at `/home/pi/rubegoldberg/raspberrypi/pilistener.py`. **ALWAYS** run the listener from here. |
+### Which Wi-Fi adapter do you recommend?
+The Edimax EW-7811Un is the most popular option for the Pis. You can buy it from [Amazon](http://www.amazon.com/Edimax-EW-7811Un-150Mbps-Raspberry-Supports/dp/B003MTTJOY) or another store.
+### How do you set up Wi-Fi on the Pis?
+You can find an official guide [here](https://www.raspberrypi.org/documentation/configuration/wireless/). When initially setting up Wi-Fi, do not plug in an Ethernet (wired internet) cable and keep the dongle plugged in while starting the Pi.
+
+**Note:** Since the Pis sent to you have only two ports, you will need to use the remaining port for ONE peripheral. This means you may need to switch peripherals manually by unplugging one and plugging in the other or you may need to buy a USB hub to extend the USB ports you can have.
+**Warning:** Your Pi's Wi-Fi dongle may not work if you plug it into a USB hub.
 ### Can I install my own software/games on these systems?
 It is not recommended to install any other applications on these images as they may interfere with the network port availability or cause other unforseen changes to the system.
 ### Can I change any settings?
