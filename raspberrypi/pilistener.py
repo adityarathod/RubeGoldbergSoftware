@@ -2,22 +2,14 @@ import socket               # Import socket module
 import time # Import the time module
 import RPi.GPIO as GPIO
 
-serDelay = 0.002 # The delay between the high and low pulses
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(18, GPIO.OUT)
+pwm = GPIO.PWM(18, 100)
+pwm.start(5)
 
-# Set up GPIO
-GPIO.setmode(GPIO.BOARD)
-GPIO.setup(7,GPIO.OUT)
-
-def move():
-   try:
-      GPIO.output(7,1)
-      time.sleep(serDelay)
-      GPIO.output(7,0)
-      print "moved."
-   except:
-      print "Unexpected error:", sys.exc_info()[0]
-      move()
-      raise
+def move(angle):
+        duty = float(angle) / 10.0 + 2.5
+        pwm.ChangeDutyCycle(duty)
 s = socket.socket()         # Create a socket object
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # Tells the system to okay the reuse of a port
 host = socket.gethostname() # Get local machine name
@@ -29,5 +21,5 @@ print "Welcome to the Rube Goldberg Software!\nWaiting for connection on " + hos
 while True:
    c, addr = s.accept()     # Establish connection with client.
    print 'Recieved signal from ', addr
-   move()
+   move(90)
    c.close()                # Close the connection
