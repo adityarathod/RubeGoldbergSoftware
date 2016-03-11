@@ -14,4 +14,4 @@ Triggers for Rube Goldberg machines.
 Visit us on [berbawy.com](http://berbawy.com/makers).
 
 ### If you need help...
-visit our [wiki] (https://github.com/applecrazy/RubeGoldbergSoftware/wiki/Welcome)! 
+visit our [wiki] (https://berbawymakers.github.io/rube/pi)! 
