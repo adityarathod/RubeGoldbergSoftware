@@ -1,8 +1,7 @@
 import os
 import subprocess
 def shell(cmd):
-    fc = cmd.split(" ")
-    return subprocess.Popen(fc, shell=True, stdout=subprocess.PIPE).communicate()[0].rstrip('\n')
+    return subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE).communicate()[0].rstrip('\n')
 print "Wi-Fi Configurator 0.1.0 by AppleCrazy\nBEFORE RUNNING THIS APPLICATION, PLUG IN YOUR WI-FI ADAPTER AND REBOOT.\nEXIT THIS PROGRAM BY PRESSING CONTROL-C.\nThis program WILL reboot your Pi.\nAlso, do not reconfigure Wi-Fi settings through this utility- this will DAMAGE the CONFIG FILE."
 print "[Step 1] Select an SSID from the following list: "
 print "Type it in EXACTLY as you see below, but without quotes."
