@@ -5,9 +5,7 @@ s = socket.socket()
 host = "0.0.0.0"
 # Need to figure out what port all school networks DON'T block.
 port = 0
-ipfile = "~/rubegoldberg/serverip.txt"
-# DON'T EDIT. Tilde Expansion
-ipfile = os.path.expanduser(ipfile)
+ipfile = "/home/pi/rubegoldberg/serverip.txt"
 if os.path.isfile(ipfile):
     try:
         fc = open(ipfile, "r").read().split("\n")
