@@ -44,7 +44,7 @@ def move(dir):
     time.sleep(.5)
 print "Welcome to the Rube Goldberg Software!"
 pin = raw_input("What Pi connection is this? ")
-filen = str(int(pin) - 1) + "-" + pin + ".txt"
+filen = pin + ".txt"
 baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
     re = urllib2.urlopen(baseURL+filen).read(100)
