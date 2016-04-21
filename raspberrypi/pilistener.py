@@ -56,5 +56,6 @@ while True:
     elif re == "STOP":
         print "No signal yet."
     else:
-        print "This is awkward. I can't seem to get the file or the file is messed up.\nThe URL is" + baseURL + filen
+        print re
+        print "This is awkward. I can't seem to get the file or the file is messed up.\nThe URL is " + baseURL + filen
     time.sleep(.5)
