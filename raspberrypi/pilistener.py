@@ -57,4 +57,4 @@ while True:
         print "No signal yet."
     else:
         print "This is awkward. I can't seem to get the file or the file is messed up."
-    time.sleep(0.5)
+    time.sleep(.5)
