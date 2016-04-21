@@ -1,7 +1,8 @@
 # Import necessary libraries
-import socket
+import urllib2
 import RPi.GPIO as GPIO
 import time
+import sys
 # This is programmatic GPIO port 18, but physical pin 12.
 # For more details on this, see the README.
 controlPort = 18
@@ -41,24 +42,19 @@ def move(dir):
     dcp = (pos * 100) / cycleMS
     pwm.start(dcp)
     time.sleep(.5)
-# Create a socket object
-s = socket.socket()
-# Set up the socket object so that reusing a port is okay
-s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-# Get the local hostname
-host = socket.gethostname()
-# Port to request the OS to reserve a port
-port = 238
-# Bind to the port
-s.bind((host, port))
-# Now it's a waiting game.
-s.listen(5)
-print "Welcome to the Rube Goldberg Software!\nWaiting for connection on " + host + ":" + str(port) +"..."
+print "Welcome to the Rube Goldberg Software!"
+pin = raw_input("What Pi connection is this? ")
+filen = str(int(pin) - 1) + "-" + pin + ".txt"
+baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
-    # Got a connection? Great! Accept it.
-    c, addr = s.accept()
-    # Tell the user the good news and move the servo
-    print 'Recieved signal from ', addr
-    move(1)
-    # Bye.
-    c.close()
+    re = urllib2.urlopen(baseURL+filen).read(100)
+    if re == "GO":
+        # Tell the user the good news and move the servo
+        print 'Recieved signal.'
+        move(1)
+        sys.exit(0)
+    elif re == "STOP":
+        print "No signal yet."
+    else:
+        print "This is awkward. I can't seem to get the file or the file is messed up."
+    time.sleep(0.5)
