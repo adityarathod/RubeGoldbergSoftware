@@ -48,6 +48,7 @@ filen = pin + ".txt"
 baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
     re = urllib2.urlopen(baseURL+filen).read(100)
+    re = re.replace(" ","")
     if re == "GO":
         # Tell the user the good news and move the servo
         print 'Recieved signal.'
@@ -56,6 +57,5 @@ while True:
     elif re == "STOP":
         print "No signal yet."
     else:
-        print re
         print "This is awkward. I can't seem to get the file or the file is messed up.\nThe URL is " + baseURL + filen
     time.sleep(.5)
