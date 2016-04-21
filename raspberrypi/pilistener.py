@@ -47,8 +47,9 @@ pin = raw_input("What Pi connection is this? ")
 filen = pin + ".txt"
 baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
-    re = urllib2.urlopen(baseURL+filen).read(100)
+    re = urllib2.urlopen(baseURL+filen).read(20)
     re = re.strip()
+    print re
     if re == "GO":
         # Tell the user the good news and move the servo
         print 'Recieved signal.'
