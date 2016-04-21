@@ -48,7 +48,7 @@ filen = pin + ".txt"
 baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
     re = urllib2.urlopen(baseURL+filen).read(100)
-    re = re.replace(" ","")
+    re = re.strip()
     if re == "GO":
         # Tell the user the good news and move the servo
         print 'Recieved signal.'
