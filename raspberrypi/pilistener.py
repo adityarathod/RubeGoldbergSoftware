@@ -43,7 +43,7 @@ def move(dir):
     pwm.start(dcp)
     time.sleep(.5)
 print "Welcome to the Rube Goldberg Software!"
-pin = raw_input("What Pi connection is this? ")
+pin = raw_input("Pi Connection ID: ")
 filen = pin + ".txt"
 baseURL = "https://rubedashboard.herokuapp.com/signal/"
 while True:
