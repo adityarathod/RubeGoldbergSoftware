@@ -52,6 +52,8 @@ while True:
         # Tell the user the good news and move the servo
         print 'Recieved signal.'
         move(1)
+        move(1)
+        move(1)
         sys.exit(0)
     elif re == "STOP":
         print "No signal yet."
