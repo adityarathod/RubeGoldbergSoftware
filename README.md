@@ -1,7 +1,7 @@
 # Rube Goldberg Software
 ##### Raspberry Pi 
 
-![current version](https://img.shields.io/badge/current%20version-1.1.0__86-brightgreen.svg)
+![current version](https://img.shields.io/badge/current%20version-1.2.0__94-brightgreen.svg)
 
 ##### Windows 
 
